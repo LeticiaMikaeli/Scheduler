@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+    <style>
+    #tabela {
+      display: none; /* tabela escondida */
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    #tabela th, #tabela td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+    
+</head>
+<body>
+    <h2>Escala</h2>    
+    <button onclick="addFuncionario()">Adicionar</button>
+    
+
+    <table id="tabela">
+    <thead>
+      <tr>
+        <th>Turno / Dia</th>
+        <th>Dom</th>
+        <th>Seg</th>
+        <th>Ter</th>
+        <th>Qua</th>
+        <th>Qui</th>
+        <th>Sex</th>
+        <th>Sáb</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Manhã</td>
+        <td><input type="checkbox" data-turno="M" data-dia="0" /></td>
+        <td><input type="checkbox" data-turno="M" data-dia="1" /></td>
+        <td><input type="checkbox" data-turno="M" data-dia="2" /></td>
+        <td><input type="checkbox" data-turno="M" data-dia="3" /></td>
+        <td><input type="checkbox" data-turno="M" data-dia="4" /></td>
+        <td><input type="checkbox" data-turno="M" data-dia="5" /></td>
+        <td><input type="checkbox" data-turno="M" data-dia="6" /></td>
+      </tr>
+      <tr>
+        <td>Tarde</td>
+        <td><input type="checkbox" data-turno="T" data-dia="0" /></td>
+        <td><input type="checkbox" data-turno="T" data-dia="1" /></td>
+        <td><input type="checkbox" data-turno="T" data-dia="2" /></td>
+        <td><input type="checkbox" data-turno="T" data-dia="3" /></td>
+        <td><input type="checkbox" data-turno="T" data-dia="4" /></td>
+        <td><input type="checkbox" data-turno="T" data-dia="5" /></td>
+        <td><input type="checkbox" data-turno="T" data-dia="6" /></td>
+      </tr>
+      <tr>
+        <td>Noite</td>
+        <td><input type="checkbox" data-turno="N" data-dia="0" /></td>
+        <td><input type="checkbox" data-turno="N" data-dia="1" /></td>
+        <td><input type="checkbox" data-turno="N" data-dia="2" /></td>
+        <td><input type="checkbox" data-turno="N" data-dia="3" /></td>
+        <td><input type="checkbox" data-turno="N" data-dia="4" /></td>
+        <td><input type="checkbox" data-turno="N" data-dia="5" /></td>
+        <td><input type="checkbox" data-turno="N" data-dia="6" /></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button onclick="enviarTabela()">Enviar</button> 
+
+  <br>
+  <div id="resultado"></div>
+    <script src="script.js">    </script>
+</body>
+</html>
